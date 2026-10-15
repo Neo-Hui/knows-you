@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "knows-you",
+  "version": "0.1.0",
+  "description": "Builds a revisable model of you: evidence, confidence, alternative explanations, review dates. Plain Markdown, local-first, no service.",
+  "author": {
+    "name": "Neo-Hui"
+  },
+  "license": "MIT",
+  "keywords": ["agent-skills", "memory", "user-model", "obsidian", "markdown", "local-first"],
+  "skills": "./skills/",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Knows You",
+        "shortDescription": "越用越懂你，但每条结论都可被推翻",
+        "longDescription": "Keeps a readable, local Markdown profile of you and records behavioral hypotheses only as falsifiable guesses: with evidence, confidence, an alternative explanation, and a review date.",
+        "developerName": "Neo-Hui",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
+        "defaultPrompt": [
+          "What do you remember about me?",
+          "Save what is durable from this task.",
+          "Review the profile and retire what no longer fits."
+        ],
+        "brandColor": "#4C7EFF"
+      }
+    }
+  }
+}
